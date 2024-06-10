@@ -1,20 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
+import {ShoppingCartIcon} from '@heroicons/react/24/outline'
 
 const NavBar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link href={"/"}>Home</Link>
-        </li>
-        <li>
-          <Link href={"/products"}>Products</Link>
-        </li>
-        <li>
-          <Link href={"/about"} prefetch={false}>About</Link>
-        </li>
-      </ul>
+    <nav className='bg-white p-2 flex justify-between'>
+      <Link href={"/"} className='text-orange-500 font-bold text-3xl'>TanvirStore</Link>
+      <div className='text-orange-500 px-4 py-2 font-bold hover:text-red-600 cursor-pointer'>
+        <ShoppingCartIcon className='w-7 h-7 inline-block'/> Cart
+        <span>{0}</span>
+      </div>
     </nav>
   )
 }
