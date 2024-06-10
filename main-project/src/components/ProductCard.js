@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { formatAmount } from '../utils/stripe'
 
 const ProductCard = ({item}) => {
+    console.log(item)
     return (
         <Link href={`/products/${item.id}`} className="w-full sm:w-64 h-62 rounded border border-gray-200 hover:cursor-pointer hover:shadow-xl">
             <img src={item.images[0]} className="w-full h-40" />

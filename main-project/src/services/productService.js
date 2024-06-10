@@ -5,6 +5,5 @@ export const getProducts = async (limit) => {
     limit: 20,
     expand: ['data.default_price']
   })
-  console.log(products)
   return products
 }
