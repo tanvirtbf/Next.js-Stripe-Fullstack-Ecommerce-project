@@ -4,13 +4,13 @@ import { getProducts } from "../services/productService"
 
 const Page = async () => {
     const products = await getProducts(9)
-    console.log(JSON.stringify(products,null,2))
+    // console.log(JSON.stringify(products,null,2))
     return (
         <div>
            <div className="m-4 flex flex-wrap justify-center gap-4">
             {
-                products.data.map((item)=> {
-                    return <ProductCard item={item}/>
+                products.data.map((item,i)=> {
+                    return <ProductCard key={i} item={item}/>
                 })
             }
            </div>
