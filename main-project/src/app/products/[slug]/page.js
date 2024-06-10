@@ -4,8 +4,8 @@ import ShareBtn from "../../../components/ShareBtn";
 import { getProductbyId } from "../../../services/productService";
 import { formatAmount } from "../../../utils/stripe";
 const Product1 = async (props) => {
-  console.log(props.params.slug)
-  const product = await getProductbyId(props.params.slug)
+  console.log(props.params.slug);
+  const product = await getProductbyId(props.params.slug);
   return (
     <div className="m-2 px-20">
       <div className="flex justify-around items-center flex-wrap">
@@ -21,7 +21,9 @@ const Product1 = async (props) => {
           </div>
           <div className="mt-4 border-t pt-4">
             <p className="text-gray-500">Price:</p>
-            <p className="text-xl font-semibold">{formatAmount(product.default_price.unit_amount)}</p>
+            <p className="text-xl font-semibold">
+              {formatAmount(product.default_price.unit_amount)}
+            </p>
           </div>
           <AddToCart />
         </div>
