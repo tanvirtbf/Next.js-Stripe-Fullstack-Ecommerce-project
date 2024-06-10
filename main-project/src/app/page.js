@@ -7,11 +7,6 @@ const Page = async () => {
     console.log(JSON.stringify(products,null,2))
     return (
         <div>
-            {/* banner */}
-           {/* <div className="bg-gray-900 h-72">
-               <h1 className="text-white text-center text-5xl font-bold pt-20">Indias most loved <span className="text-orange-400">fashion</span> platform for <span className="text-rose-500">coders!</span></h1>
-           </div> */}
-           {/* cards */}
            <div className="m-4 flex flex-wrap justify-center gap-4">
             {
                 products.data.map((item)=> {
