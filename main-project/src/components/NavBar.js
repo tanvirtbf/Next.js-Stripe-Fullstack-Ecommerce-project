@@ -8,12 +8,20 @@ const NavBar = () => {
       <Link href={"/"} className="text-orange-500 font-bold text-3xl">
         TanvirStore
       </Link>
-      <Link href={"/cart"}>
-        <div className="text-orange-500 px-4 py-2 font-bold hover:text-red-600 cursor-pointer">
-          <ShoppingCartIcon className="w-7 h-7 inline-block" /> Cart
-          <span>{0}</span>
-        </div>
-      </Link>
+      <div className="flex justify-center items-center">
+        <Link
+          href={"/products"}
+          className="text-orange-500 px-4 py-2 font-bold hover:text-red-600 cursor-pointer text-xl"
+        >
+          All Products
+        </Link>
+        <Link href={"/cart"}>
+          <div className="text-orange-500 px-4 py-2 font-bold hover:text-red-600 cursor-pointer">
+            <ShoppingCartIcon className="w-7 h-7 inline-block" /> Cart
+            <span>{0}</span>
+          </div>
+        </Link>
+      </div>
     </nav>
   );
 };
