@@ -3,6 +3,8 @@ import NavBar from "../components/NavBar";
 import { arsenal } from '../fonts';
 
 
+
+
 export default function RootLayout({ children }) {
  return (
     <html lang="en">
